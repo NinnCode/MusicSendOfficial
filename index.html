@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="button-1.css">
+</head>
+<body>
+    <div id="overlay" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 999; display: none;"></div>
+    <p class="text">Hi, Which one will you choose?</p>
+    <div class="head"></div>
+ 
+    <div class="wraper">
+        
+        <a href="#" class="green-button" onclick="showMessageAndRedirect(this)">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Chill chill
+        </a>
+        <a href="#" class="blue-button" onclick="showMessageAndRedirect(this)">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Music
+        </a>
+        <a href="#" class="yellow-button" onclick="showMessageAndRedirect(this)">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Melody
+        </a>
+    </div>
+
+    <script>
+        function showMessageAndRedirect(button) {
+            // Hide overlay
+            document.getElementById('overlay').style.display = 'none';
+            
+            // Show notifications
+            var message = document.createElement('div');
+            message.textContent = "Thật ra chọn nút nhấn nào cũng như nhau ạ ^^";
+            message.style.cssText = 'position: fixed; top: 10%; left: 50%; transform: translate(-50%, -50%); background-color: #111; color: white; padding: 20px; z-index: 9999;';
+            document.body.appendChild(message);
+    
+            // Redirect after a while
+            setTimeout(function() {
+                window.location.replace("https://ninncode.github.io/MusicTet/"); 
+            }, 3500); 
+        }
+    </script>
+</body>
+</html>
